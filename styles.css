@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:ivory;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Nav Bar */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 50px;
+    height: 80px;
+}
+
+/* name */
+
+nav #left a{
+     font-size: 22px;
+     font-weight: 600;
+}
+
+/* icons */
+
+nav #right a{
+       margin: 0 10px;
+}
+
+/* email icon decoration */
+
+nav #right a:last-child{
+
+    background-color: black;
+    color:ivory;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* spacing between thw icon and the word */
+
+nav #right a span {
+     margin : 5px;
+}
+
+/* Main */
+
+/* first page */
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin: 50px 0;
+    align-items: center;
+    gap:40px;
+    margin-bottom: 100px;
+}
+
+/* text section on main page */
+
+.main #text{
+    flex: 5;
+}
+
+.main #text h2{
+    font-size: 45px;
+}
+
+.main #text .icons{
+    margin: 25px;
+}
+
+.main #text .icons a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid brown;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.main #text .icons a:hover{
+    color: brown;
+    border: 2px solid black;
+    transition: .1s;
+}
+
+/* image section on main page */
+
+.main #img{
+    flex:2;
+}
+
+.main #img img{
+    width: 280px;
+    height: 290px;
+    /* border-radius: 50%; */
+}
+
+/* Skills Section */
+
+#skills{
+
+    padding: 0 50px;
+    margin-bottom: 100px;
+
+}
+
+#skills h2{
+        
+    text-align: center;
+    font-size: 30px;
+}
+
+#skills #items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#skills #items #item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    width:200px;
+    border: 1.5px solid grey;
+    border-radius: 5px;
+    margin: 10px;
+    gap:10px;
+}
+
+#skills #items #item img{
+
+    width:30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+#skills #items #item span{
+    font-size:18px;
+}
+
+/* About Me  section */
+
+#about{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+#about h2{
+    font-size: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#about #para{
+    font-weight: 600;
+}
+
+/* Contact Me Section */
+
+#contact{
+    padding: 0 50px;
+    margin-bottom: 100px;
+    /* display: flex; */
+}
+
+#contact h2{
+    font-size: 35px;
+}
+
+#contact #form form{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+#contact #form form input,
+#contact #form form textarea{
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    border: 2px solid brown;
+    padding: 10px;
+    margin-bottom: 15px;
+    resize: none;
+    outline: none;
+}
+
+#contact #form form button{
+     
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color:azure;
+    background-color: brown;
+    border: none;
+    height: 50px;
+    cursor: none;
+}
+
+#contact #form form button:hover{
+      filter: brightness(.9); 
+}
+
+
+/* responsive section */
+
+/* responsive for the heading tag */
+
+@media (max-width:900px){
+    /* main */
+    .main #text h2{
+    font-size: 35px;
+    }
+}
+
+/* responsive for the image and paragraph */
+
+@media (max-width:740px) {
+    .main{
+        flex-direction: column-reverse;
+    }
+
+    .main #img img{
+        width:200px;
+        height:200px;
+    }
+
+    /* contact us */
+     #contact #form{
+        flex-direction: column;
+     }
+}
+
+
+
+/* responsive for the Nav Bar */
+
+@media (max-width:600px){
+    /* Navbar */
+     nav{
+         padding:0 20px;
+     }
+     
+     nav #right a span{
+        display: none;
+     }
+    
+    nav #right a{
+       font-size: 20px;
+    }
+    
+     nav #right a span {
+     display: none;
+     }
+
+     nav #right a:last-child{
+        color:black;
+        background-color: transparent;
+        padding: 0;
+
+     }
+      
+     nav #left a{
+        font-size: 15px;
+     }
+     
+     /* main */
+
+     .main{
+        padding:0 20px;
+     }
+
+     .main #text h2{
+    font-size: 30px;
+
+    /* Section 2 : Skill column */
+
+    #skills{
+        padding: 0 20px;
+    }
+    
+    #skills #items #item span{
+        font-size: 16px;
+    }
+
+    /* section 3: About Me  */
+
+    #about{
+    padding: 0 20px;
+    }
+    
+
+    /* section 4: contact Me */
+        /* contact us */
+     #contact #form{
+        flex-direction: column;
+     }
+
+
+  
+}
+
+}
